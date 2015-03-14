@@ -14,3 +14,11 @@ E:\GitCode\CsdnCode\DotNetMVCWageSite\MvcRoom\obj\Debug\MvcRoom.vbproj.GenerateR
 E:\GitCode\CsdnCode\DotNetMVCWageSite\MvcRoom\obj\Debug\MvcRoom.dll
 E:\GitCode\CsdnCode\DotNetMVCWageSite\MvcRoom\obj\Debug\MvcRoom.xml
 E:\GitCode\CsdnCode\DotNetMVCWageSite\MvcRoom\obj\Debug\MvcRoom.pdb
+E:\GitHubCode\MvcToolSet\MvcRoom\obj\Debug\MvcRoom.Resources.resources
+E:\GitHubCode\MvcToolSet\MvcRoom\obj\Debug\MvcRoom.vbproj.GenerateResource.Cache
+E:\GitHubCode\MvcToolSet\MvcRoom\obj\Debug\MvcRoom.dll
+E:\GitHubCode\MvcToolSet\MvcRoom\obj\Debug\MvcRoom.xml
+E:\GitHubCode\MvcToolSet\MvcRoom\obj\Debug\MvcRoom.pdb
+E:\GitHubCode\MvcToolSet\MvcRoom\bin\MvcRoom.dll
+E:\GitHubCode\MvcToolSet\MvcRoom\bin\MvcRoom.pdb
+E:\GitHubCode\MvcToolSet\MvcRoom\bin\MvcRoom.xml

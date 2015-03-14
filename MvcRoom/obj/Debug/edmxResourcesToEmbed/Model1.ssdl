@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+  <EntityContainer Name="DBModelStoreContainer">
+    <EntitySet Name="Users" EntityType="DBModel.Store.Users" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserCode" Type="nchar" Nullable="true" MaxLength="50" />
+    <Property Name="UserName" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="Password" Type="nvarchar" Nullable="true" MaxLength="400" />
+    <Property Name="CreateTime" Type="datetime" Nullable="true" />
+    <Property Name="IsLocked" Type="bit" Nullable="true" />
+    <Property Name="IsAdmin" Type="bit" Nullable="true" />
+    <Property Name="Role" Type="nvarchar" Nullable="true" MaxLength="400" />
+  </EntityType>
+</Schema>

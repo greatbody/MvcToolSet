@@ -1,0 +1,10 @@
+E:\GitHubCode\MvcToolSet\AutoTestTrial\obj\Debug\AutoTestTrial.vbprojResolveAssemblyReference.cache
+E:\GitHubCode\MvcToolSet\AutoTestTrial\bin\Debug\AutoTestTrial.dll
+E:\GitHubCode\MvcToolSet\AutoTestTrial\bin\Debug\AutoTestTrial.pdb
+E:\GitHubCode\MvcToolSet\AutoTestTrial\bin\Debug\AutoTestTrial.xml
+E:\GitHubCode\MvcToolSet\AutoTestTrial\bin\Debug\MvcRoom.dll
+E:\GitHubCode\MvcToolSet\AutoTestTrial\bin\Debug\MvcRoom.pdb
+E:\GitHubCode\MvcToolSet\AutoTestTrial\bin\Debug\MvcRoom.xml
+E:\GitHubCode\MvcToolSet\AutoTestTrial\obj\Debug\AutoTestTrial.dll
+E:\GitHubCode\MvcToolSet\AutoTestTrial\obj\Debug\AutoTestTrial.xml
+E:\GitHubCode\MvcToolSet\AutoTestTrial\obj\Debug\AutoTestTrial.pdb

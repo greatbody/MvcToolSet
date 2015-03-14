@@ -1,4 +1,6 @@
-﻿<HandleError()> _
+﻿Imports MvcRoom.Business
+
+<HandleError()> _
 Public Class HomeController
     Inherits System.Web.Mvc.Controller
 
@@ -6,24 +8,33 @@ Public Class HomeController
         ViewData("Message") = "欢迎使用 ASP.NET MVC!"
         ViewData("Title") = "欢迎来到在线工具平台"
         ViewData("Index") = "class=""active"""
-        Dim UserList As List(Of User)
-        Using db As New DataClasses1DataContext
-            UserList = db.User.ToList()
+        Dim userList As List(Of User)
+        Using db As New DbMContainer
+            userList = db.Users.ToList()
         End Using
-        ViewData("UserData") = UserList
+        ViewData("UserData") = userList
         Return View()
     End Function
 
     Function About() As ActionResult
         ViewData("About") = "class=""active"""
         Dim k As New User
-        k.UserName = "ss"
-        k.UserGUID = Guid.NewGuid()
+        With k
+            .UserCode = "sunsoft"
+            .UserName = "孙瑞"
+            .Password = SecurityCenter.EncriptStr("wintel", "mj")
 
-        Using kopr As New DataClasses1DataContext
-            kopr.User.InsertOnSubmit(k)
-            kopr.SubmitChanges()
+        End With
+        Using kUpDater As New DbMContainer
+
+            kUpDater.AddToUsers(k)
+            kUpDater.SaveChanges(True)
+
         End Using
+        'Using kopr As New DataClasses1DataContext
+        '    kopr.User.InsertOnSubmit(k)
+        '    kopr.SubmitChanges()
+        'End Using
 
         Return View()
     End Function

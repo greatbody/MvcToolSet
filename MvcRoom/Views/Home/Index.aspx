@@ -24,7 +24,7 @@
             <%= o.UserName %>
         </div>
         <div>
-            <%= o.UserGUID%>
+            <%= o.UserCode %>
         </div>
     </div>
     <%Next%>
