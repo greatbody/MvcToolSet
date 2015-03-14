@@ -1,0 +1,16 @@
+E:\GitHubCode\MvcRoom\MvcRoom\bin\MvcRoom.dll
+E:\GitHubCode\MvcRoom\MvcRoom\bin\MvcRoom.pdb
+E:\GitHubCode\MvcRoom\MvcRoom\bin\MvcRoom.xml
+E:\GitHubCode\MvcRoom\MvcRoom\obj\Debug\MvcRoom.Resources.resources
+E:\GitHubCode\MvcRoom\MvcRoom\obj\Debug\MvcRoom.vbproj.GenerateResource.Cache
+E:\GitHubCode\MvcRoom\MvcRoom\obj\Debug\MvcRoom.dll
+E:\GitHubCode\MvcRoom\MvcRoom\obj\Debug\MvcRoom.xml
+E:\GitHubCode\MvcRoom\MvcRoom\obj\Debug\MvcRoom.pdb
+E:\GitCode\CsdnCode\DotNetMVCWageSite\MvcRoom\bin\MvcRoom.dll
+E:\GitCode\CsdnCode\DotNetMVCWageSite\MvcRoom\bin\MvcRoom.pdb
+E:\GitCode\CsdnCode\DotNetMVCWageSite\MvcRoom\bin\MvcRoom.xml
+E:\GitCode\CsdnCode\DotNetMVCWageSite\MvcRoom\obj\Debug\MvcRoom.Resources.resources
+E:\GitCode\CsdnCode\DotNetMVCWageSite\MvcRoom\obj\Debug\MvcRoom.vbproj.GenerateResource.Cache
+E:\GitCode\CsdnCode\DotNetMVCWageSite\MvcRoom\obj\Debug\MvcRoom.dll
+E:\GitCode\CsdnCode\DotNetMVCWageSite\MvcRoom\obj\Debug\MvcRoom.xml
+E:\GitCode\CsdnCode\DotNetMVCWageSite\MvcRoom\obj\Debug\MvcRoom.pdb
