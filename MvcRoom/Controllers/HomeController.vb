@@ -5,37 +5,32 @@ Public Class HomeController
     Inherits System.Web.Mvc.Controller
 
     Function Index() As ActionResult
-        ViewData("Message") = "欢迎使用 ASP.NET MVC!"
         ViewData("Title") = "欢迎来到在线工具平台"
         ViewData("Index") = "class=""active"""
         Dim userList As List(Of User)
-        Using db As New DbMContainer
-            userList = db.Users.ToList()
-        End Using
+        Dim db As New DbMContainer
+
+        userList = (From sUsers In db.Users Order By sUsers.CreateTime Descending).Take(5).ToList()
+
         ViewData("UserData") = userList
         Return View()
     End Function
 
     Function About() As ActionResult
         ViewData("About") = "class=""active"""
-        Dim k As New User
-        With k
-            .UserCode = "sunsoft"
-            .UserName = "孙瑞"
-            .Password = SecurityCenter.EncriptStr("wintel", "mj")
+        'Dim k As New User
+        'With k
+        '    .UserCode = "sunsoft"
+        '    .UserName = "孙瑞"
+        '    .Password = SecurityCenter.EncriptStr("wintel", "mj")
 
-        End With
-        Using kUpDater As New DbMContainer
+        'End With
+        'Using kUpDater As New DbMContainer
 
-            kUpDater.AddToUsers(k)
-            kUpDater.SaveChanges(True)
+        '    kUpDater.AddToUsers(k)
+        '    kUpDater.SaveChanges(True)
 
-        End Using
-        'Using kopr As New DataClasses1DataContext
-        '    kopr.User.InsertOnSubmit(k)
-        '    kopr.SubmitChanges()
         'End Using
-
         Return View()
     End Function
 
@@ -58,5 +53,17 @@ Public Class HomeController
             a.AppendLine(String.Format("{0} = {0} + "" {1} """, ObjectName, i))
         Next
         Return Json(New With {.TransCode = a.ToString()})
+    End Function
+
+    <HttpPost()> _
+    Function SaveNewUser(ByVal UserInfo As User) As ActionResult
+        If String.IsNullOrEmpty(UserInfo.UserCode) OrElse String.IsNullOrEmpty(UserInfo.Password) Then
+            Return Json(New With {.Result = False, .Message = "请输入对应的正确错误数据！"})
+        End If
+        Using db As New DbMContainer
+            db.AddToUsers(UserInfo)
+            db.SaveChanges(True)
+        End Using
+        Return Json(New With {.Result = True, .Message = ""})
     End Function
 End Class

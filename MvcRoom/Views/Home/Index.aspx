@@ -6,27 +6,49 @@
 </asp:Content>
 <asp:Content ID="indexContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2>
-        <%=Html.Encode(ViewData("Message"))%></h2>
-    <p>
-        若要了解有关 ASP.NET MVC 的更多信息，请访问 <a href="http://asp.net/mvc" title="ASP.NET MVC 网站">http://asp.net/mvc</a>。
-    </p>
-    <div class="row">
-        <div class="col-lg-1">
-            信息
-        </div>
-        <div>
-            GUID
-        </div>
-    </div>
-    <% For Each o As User In ViewData("UserData")%>
-    <div class="row">
-        <div class="col-lg-1">
-            <%= o.UserName %>
-        </div>
-        <div>
-            <%= o.UserCode %>
-        </div>
-    </div>
-    <%Next%>
+        孙瑞开发工具平台 - SunSoft@2014-2017</h2>
+    <%Dim recentTopFiveUserList As List(Of User) = DirectCast(ViewData("UserData"), List(Of MvcRoom.User))%>
+    <%If recentTopFiveUserList.Count > 0 Then%>
+    <table class="table table-striped">
+        <caption>
+            欢迎新用户</caption>
+        <thead>
+            <tr>
+                <th>
+                    ID
+                </th>
+                <th>
+                    昵称
+                </th>
+                <th>
+                    注册时间
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <%For Each sUser As User In recentTopFiveUserList%>
+            <tr>
+                <td>
+                    <%= sUser.ID%>
+                </td>
+                <td>
+                    <%= suser.UserName %>
+                </td>
+                <td>
+                    <%= suser.CreateTime %>
+                </td>
+            </tr>
+            <%Next%>
+        </tbody>
+    </table>
+    <%Else%>
+    <table class="table table-striped">
+        <tr class="danger">
+            <td class="text-center text-success" style="height: 100%">
+                无信息
+            </td>
+        </tr>
+    </table>
+    <%End If%>
     <script src="/Scripts/Index.js" type="text/javascript"></script>
 </asp:Content>
