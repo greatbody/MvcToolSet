@@ -22,3 +22,11 @@ E:\GitHubCode\MvcToolSet\MvcRoom\obj\Debug\MvcRoom.pdb
 E:\GitHubCode\MvcToolSet\MvcRoom\bin\MvcRoom.dll
 E:\GitHubCode\MvcToolSet\MvcRoom\bin\MvcRoom.pdb
 E:\GitHubCode\MvcToolSet\MvcRoom\bin\MvcRoom.xml
+E:\GitCode\GitHub\MvcToolSet\MvcRoom\bin\MvcRoom.dll
+E:\GitCode\GitHub\MvcToolSet\MvcRoom\bin\MvcRoom.pdb
+E:\GitCode\GitHub\MvcToolSet\MvcRoom\bin\MvcRoom.xml
+E:\GitCode\GitHub\MvcToolSet\MvcRoom\obj\Debug\MvcRoom.Resources.resources
+E:\GitCode\GitHub\MvcToolSet\MvcRoom\obj\Debug\MvcRoom.vbproj.GenerateResource.Cache
+E:\GitCode\GitHub\MvcToolSet\MvcRoom\obj\Debug\MvcRoom.dll
+E:\GitCode\GitHub\MvcToolSet\MvcRoom\obj\Debug\MvcRoom.xml
+E:\GitCode\GitHub\MvcToolSet\MvcRoom\obj\Debug\MvcRoom.pdb
