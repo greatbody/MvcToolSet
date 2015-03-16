@@ -21,6 +21,8 @@
                         <%= Html.ActionLink("主页", "Index", "Home")%></li>
                     <li <%= ViewData("WageInput") %>>
                         <%= Html.ActionLink("SQL转换工具", "WageInput", "Home")%></li>
+                    <li <%= ViewData("MailCreator") %>>
+                        <%= Html.ActionLink("E-Mail生成器", "MailCreator", "Home")%></li>
                     <li <%= ViewData("About") %>>
                         <%= Html.ActionLink("注册", "About", "Home")%></li>
                     <%If ViewData("Role") = "user" Then%>

@@ -170,9 +170,12 @@
     <Content Include="Scripts\bootstrap\js\bootstrap.min.js" />
     <Content Include="Scripts\bootstrap\js\npm.js" />
     <Content Include="Scripts\jquery-1.11.2.js" />
+    <Content Include="Scripts\MailCreator.js" />
     <Content Include="Scripts\master.js" />
     <Content Include="Scripts\Index.js" />
     <Content Include="Scripts\WageInput.js" />
+    <Content Include="Views\Home\EmailHtmlData.aspx" />
+    <Content Include="Views\Home\MailCreator.aspx" />
     <Content Include="Views\Home\MyInfo.aspx" />
     <Content Include="Views\Home\WageInput.aspx" />
     <Content Include="Web.config" />

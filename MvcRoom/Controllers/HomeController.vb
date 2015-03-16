@@ -18,25 +18,11 @@ Public Class HomeController
 
     Function About() As ActionResult
         ViewData("About") = "class=""active"""
-        'Dim k As New User
-        'With k
-        '    .UserCode = "sunsoft"
-        '    .UserName = "孙瑞"
-        '    .Password = SecurityCenter.EncriptStr("wintel", "mj")
-
-        'End With
-        'Using kUpDater As New DbMContainer
-
-        '    kUpDater.AddToUsers(k)
-        '    kUpDater.SaveChanges(True)
-
-        'End Using
         Return View()
     End Function
 
     Function WageInput() As ActionResult
         ViewData("WageInput") = "class=""active"""
-
         Return View()
     End Function
 
@@ -44,6 +30,12 @@ Public Class HomeController
         ViewData("MyInfo") = "class=""active"""
         Return View()
     End Function
+
+    Function MailCreator() As ActionResult
+        ViewData("MailCreator") = "class=""active"""
+        Return View()
+    End Function
+
     <HttpPost()> _
     Function GetTestData(ByVal a As Integer, ByVal b As Integer) As ActionResult
         Return Json(New With {.id = a + b})
@@ -71,5 +63,12 @@ Public Class HomeController
             db.SaveChanges(True)
         End Using
         Return Json(New With {.Result = True, .Message = ""})
+    End Function
+
+    <HttpPost()> _
+    Function GetHtmlData(ByVal UserName As String, ByVal BeginDate As Date) As ActionResult
+        ViewData("UserName") = UserName
+        ViewData("BeginDate") = BeginDate
+        Return View("EmailHtmlData")
     End Function
 End Class
