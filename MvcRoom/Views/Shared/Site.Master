@@ -14,27 +14,21 @@
 </head>
 <body>
     <div id="header">
-        <div class="navbar">
-            <div>
-                <ul class="nav nav-tabs">
-                    <li <%= ViewData("Index") %>>
-                        <%= Html.ActionLink("主页", "Index", "Home")%></li>
-                    <li <%= ViewData("WageInput") %>>
-                        <%= Html.ActionLink("SQL转换工具", "WageInput", "Home")%></li>
-                    <li <%= ViewData("MailCreator") %>>
-                        <%= Html.ActionLink("E-Mail生成器", "MailCreator", "Home")%></li>
-                    <li <%= ViewData("About") %>>
-                        <%= Html.ActionLink("注册", "About", "Home")%></li>
-                    <%If ViewData("Role") = "user" Then%>
-                    <li <%= ViewData("MyInfo") %>>
-                        <%= Html.ActionLink("我的信息", "MyInfo", "Home")%></li>
-                    <%End If%>
-                    <li class="navbar-right"><a href="/Home/LogOut">[登陆]</a></li>
-                </ul>
-                <ul>
-                </ul>
-            </div>
-        </div>
+        <ul class="nav nav-tabs">
+            <li <%= ViewData("Index") %>>
+                <%= Html.ActionLink("主页", "Index", "Home")%></li>
+            <li <%= ViewData("WageInput") %>>
+                <%= Html.ActionLink("SQL转换工具", "WageInput", "Home")%></li>
+            <li <%= ViewData("MailCreator") %>>
+                <%= Html.ActionLink("E-Mail生成器", "MailCreator", "Home")%></li>
+            <li <%= ViewData("About") %>>
+                <%= Html.ActionLink("注册", "About", "Home")%></li>
+            <%If ViewData("Role") = "user" Then%>
+            <li <%= ViewData("MyInfo") %>>
+                <%= Html.ActionLink("我的信息", "MyInfo", "Home")%></li>
+            <%End If%>
+            <li class="navbar-right"><a href="/Home/LogOut">[登陆]</a></li>
+        </ul>
         <div class="container-fluid">
             <asp:ContentPlaceHolder ID="MainContent" runat="server" />
         </div>
