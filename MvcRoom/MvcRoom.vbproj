@@ -161,6 +161,7 @@
     <Content Include="Global.asax" />
     <Content Include="Image\picbra.jpg" />
     <Content Include="Model1.edmx.sql" />
+    <Content Include="Scripts\About.js" />
     <Content Include="Scripts\bootstrap\css\bootstrap-theme.css" />
     <Content Include="Scripts\bootstrap\css\bootstrap-theme.min.css" />
     <Content Include="Scripts\bootstrap\css\bootstrap.css" />
@@ -172,6 +173,7 @@
     <Content Include="Scripts\master.js" />
     <Content Include="Scripts\Index.js" />
     <Content Include="Scripts\WageInput.js" />
+    <Content Include="Views\Home\MyInfo.aspx" />
     <Content Include="Views\Home\WageInput.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -199,6 +201,7 @@
     <Content Include="Views\Shared\LogOnUserControl.ascx" />
     <Content Include="Views\Shared\Site.Master" />
     <Content Include="Views\Web.config" />
+    <Content Include="配置说明.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

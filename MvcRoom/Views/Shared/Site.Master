@@ -22,7 +22,14 @@
                     <li <%= ViewData("WageInput") %>>
                         <%= Html.ActionLink("SQL转换工具", "WageInput", "Home")%></li>
                     <li <%= ViewData("About") %>>
-                        <%= Html.ActionLink("关于", "About", "Home")%></li>
+                        <%= Html.ActionLink("注册", "About", "Home")%></li>
+                    <%If ViewData("Role") = "user" Then%>
+                    <li <%= ViewData("MyInfo") %>>
+                        <%= Html.ActionLink("我的信息", "MyInfo", "Home")%></li>
+                    <%End If%>
+                    <li class="navbar-right"><a href="/Home/LogOut">[登陆]</a></li>
+                </ul>
+                <ul>
                 </ul>
             </div>
         </div>

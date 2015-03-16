@@ -12,15 +12,20 @@
     <table class="table table-striped">
         <caption>
             欢迎新用户</caption>
+        <colgroup>
+            <col style="width: 300px" />
+            <col style="width: 300px"/>
+            <col />
+        </colgroup>
         <thead>
             <tr>
-                <th>
-                    ID
+                <th class="text-left">
+                    用户名
                 </th>
-                <th>
+                <th class="text-left">
                     昵称
                 </th>
-                <th>
+                <th class="text-left">
                     注册时间
                 </th>
             </tr>
@@ -29,7 +34,7 @@
             <%For Each sUser As User In recentTopFiveUserList%>
             <tr>
                 <td>
-                    <%= sUser.ID%>
+                    <%= sUser.UserCode %>
                 </td>
                 <td>
                     <%= suser.UserName %>

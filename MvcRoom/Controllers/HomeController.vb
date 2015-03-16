@@ -39,6 +39,11 @@ Public Class HomeController
 
         Return View()
     End Function
+
+    Function MyInfo() As ActionResult
+        ViewData("MyInfo") = "class=""active"""
+        Return View()
+    End Function
     <HttpPost()> _
     Function GetTestData(ByVal a As Integer, ByVal b As Integer) As ActionResult
         Return Json(New With {.id = a + b})
@@ -60,6 +65,7 @@ Public Class HomeController
         If String.IsNullOrEmpty(UserInfo.UserCode) OrElse String.IsNullOrEmpty(UserInfo.Password) Then
             Return Json(New With {.Result = False, .Message = "请输入对应的正确错误数据！"})
         End If
+        UserInfo.CreateTime = Now
         Using db As New DbMContainer
             db.AddToUsers(UserInfo)
             db.SaveChanges(True)
