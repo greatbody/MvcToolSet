@@ -162,6 +162,7 @@
     <Content Include="Image\picbra.jpg" />
     <Content Include="Model1.edmx.sql" />
     <Content Include="Scripts\About.js" />
+    <Content Include="Scripts\bootstrap-datepicker.js" />
     <Content Include="Scripts\bootstrap\css\bootstrap-theme.css" />
     <Content Include="Scripts\bootstrap\css\bootstrap-theme.min.css" />
     <Content Include="Scripts\bootstrap\css\bootstrap.css" />
@@ -169,6 +170,7 @@
     <Content Include="Scripts\bootstrap\js\bootstrap.js" />
     <Content Include="Scripts\bootstrap\js\bootstrap.min.js" />
     <Content Include="Scripts\bootstrap\js\npm.js" />
+    <Content Include="Scripts\datepicker.css" />
     <Content Include="Scripts\jquery-1.11.2.js" />
     <Content Include="Scripts\MailCreator.js" />
     <Content Include="Scripts\master.js" />

@@ -15,7 +15,7 @@
 function getToObject(rangeParentName) {
     var oRange = document.getElementById(rangeParentName);
     var obj = new Object();
-    $("*[data-req='true']", oRange).each(function (id) {
+    $("*[data-req='true']", oRange).each(function () {
         obj[$(this).attr("data-dbfield")] = $(this).val();
     });
     return obj;

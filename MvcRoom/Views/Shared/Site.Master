@@ -3,7 +3,7 @@
 <%--下面的代码行是 VB / ASPX 设计器 Bug 的解决方法--%>
 <%= ""%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" style="height: 100%">
 <head runat="server">
     <title>
         <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
@@ -11,16 +11,17 @@
     <script src="../../Scripts/jquery-1.11.2.js" type="text/javascript"></script>
     <script src="../../Scripts/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
     <link href="../../Scripts/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeaderReserve" runat="server" />
 </head>
-<body>
-    <div id="header">
+<body style="height: 92.02%">
+    <div id="header" style="width: 98%; margin: auto; height: 100%">
         <ul class="nav nav-tabs">
             <li <%= ViewData("Index") %>>
                 <%= Html.ActionLink("主页", "Index", "Home")%></li>
             <li <%= ViewData("WageInput") %>>
                 <%= Html.ActionLink("SQL转换工具", "WageInput", "Home")%></li>
             <li <%= ViewData("MailCreator") %>>
-                <%= Html.ActionLink("E-Mail生成器", "MailCreator", "Home")%></li>
+                <%= Html.ActionLink("日志E-Mail生成器", "MailCreator", "Home")%></li>
             <li <%= ViewData("About") %>>
                 <%= Html.ActionLink("注册", "About", "Home")%></li>
             <%If ViewData("Role") = "user" Then%>
@@ -29,7 +30,7 @@
             <%End If%>
             <li class="navbar-right"><a href="/Home/LogOut">[登陆]</a></li>
         </ul>
-        <div class="container-fluid">
+        <div class="container-fluid" style="height: 100%">
             <asp:ContentPlaceHolder ID="MainContent" runat="server" />
         </div>
         <div id="footer">
