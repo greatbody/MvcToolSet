@@ -36,6 +36,10 @@ Public Class HomeController
         Return View()
     End Function
 
+    Function EditFrame() As ActionResult
+        Return View()
+    End Function
+
     <HttpPost()> _
     Function GetTestData(ByVal a As Integer, ByVal b As Integer) As ActionResult
         Return Json(New With {.id = a + b})
