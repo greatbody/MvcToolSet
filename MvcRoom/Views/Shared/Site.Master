@@ -14,7 +14,7 @@
     <asp:ContentPlaceHolder ID="HeaderReserve" runat="server" />
 </head>
 <body style="height: 92.02%">
-    <div id="header" style="width: 98%; margin: auto; height: 100%">
+    <div id="header" style="width: 95%; margin: auto; height: 96%">
         <ul class="nav nav-tabs">
             <li <%= ViewData("Index") %>>
                 <%= Html.ActionLink("主页", "Index", "Home")%></li>

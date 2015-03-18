@@ -4,7 +4,9 @@
     }
     var oData = getToObject("form1");
     $.post("/Home/GetHtmlData", { UserName: oData.UserName, BeginDate: oData.BeginDate }, function (data) {
-        $("#showHTML").html(data);
+        //$("#showHTML").html(data);
+        var oEditor = UE.getEditor('container');
+        oEditor.setContent(data);
     });
 });
 
