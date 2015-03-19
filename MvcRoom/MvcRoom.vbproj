@@ -466,6 +466,7 @@
     <Content Include="Views\Home\EmailHtmlData.aspx" />
     <Content Include="Views\Home\MailCreator.aspx" />
     <Content Include="Views\Home\MyInfo.aspx" />
+    <Content Include="Views\Home\ToolSet.aspx" />
     <Content Include="Views\Home\WageInput.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

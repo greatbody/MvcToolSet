@@ -2,12 +2,13 @@
 <Schema xmlns="http://schemas.microsoft.com/ado/2006/04/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="DBModel" Alias="Self">
   <EntityContainer Name="DbMContainer">
     <EntitySet Name="Users" EntityType="DBModel.User" />
+    <EntitySet Name="AppUsages" EntityType="DBModel.AppUsage" />
   </EntityContainer>
   <EntityType Name="User">
     <Key>
-      <PropertyRef Name="ID" />
+      <PropertyRef Name="UserID" />
     </Key>
-    <Property Type="Int64" Name="ID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int64" Name="UserID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
     <Property Type="String" Name="UserCode" Nullable="true" FixedLength="true" MaxLength="50" />
     <Property Type="String" Name="UserName" Nullable="true" MaxLength="100" />
     <Property Type="String" Name="Password" Nullable="true" MaxLength="400" />
@@ -15,5 +16,15 @@
     <Property Type="Boolean" Name="IsLocked" Nullable="true" />
     <Property Type="Boolean" Name="IsAdmin" Nullable="true" />
     <Property Type="String" Name="Role" Nullable="true" MaxLength="400" />
+  </EntityType>
+  <EntityType Name="AppUsage">
+    <Key>
+      <PropertyRef Name="UsageID" />
+    </Key>
+    <Property Type="Int64" Name="UsageID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="AppName" Nullable="true" FixedLength="false" MaxLength="Max" />
+    <Property Type="DateTime" Name="VisitTime" Nullable="true" />
+    <Property Type="String" Name="UserIP" Nullable="true" MaxLength="100" />
+    <Property Type="Int64" Name="UserID" Nullable="true" />
   </EntityType>
 </Schema>

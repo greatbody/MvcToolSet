@@ -2,9 +2,10 @@
 
 <HandleError()> _
 Public Class HomeController
-    Inherits System.Web.Mvc.Controller
+    Inherits Controller
 
     Function Index() As ActionResult
+        BusinessCenter.LogVisitor(Web.HttpContext.Current, "index")
         ViewData("Title") = "欢迎来到在线工具平台"
         ViewData("Index") = "class=""active"""
         Dim userList As List(Of User)
@@ -17,11 +18,13 @@ Public Class HomeController
     End Function
 
     Function About() As ActionResult
+        BusinessCenter.LogVisitor(Web.HttpContext.Current, "about")
         ViewData("About") = "class=""active"""
         Return View()
     End Function
 
     Function WageInput() As ActionResult
+        BusinessCenter.LogVisitor(Web.HttpContext.Current, "sqltrans")
         ViewData("WageInput") = "class=""active"""
         Return View()
     End Function
@@ -32,11 +35,17 @@ Public Class HomeController
     End Function
 
     Function MailCreator() As ActionResult
+        BusinessCenter.LogVisitor(Web.HttpContext.Current, "creatmail")
         ViewData("MailCreator") = "class=""active"""
         Return View()
     End Function
 
     Function EditFrame() As ActionResult
+        Return View()
+    End Function
+
+    Function ToolSet() As ActionResult
+        ViewData("ToolSet") = "class=""active"""
         Return View()
     End Function
 

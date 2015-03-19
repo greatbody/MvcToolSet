@@ -2,12 +2,13 @@
 <Schema Namespace="DBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
   <EntityContainer Name="DBModelStoreContainer">
     <EntitySet Name="Users" EntityType="DBModel.Store.Users" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AppUsages" EntityType="DBModel.Store.AppUsages" store:Type="Tables" Schema="dbo" />
   </EntityContainer>
   <EntityType Name="Users">
     <Key>
-      <PropertyRef Name="ID" />
+      <PropertyRef Name="UserID" />
     </Key>
-    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="UserCode" Type="nchar" Nullable="true" MaxLength="50" />
     <Property Name="UserName" Type="nvarchar" Nullable="true" MaxLength="100" />
     <Property Name="Password" Type="nvarchar" Nullable="true" MaxLength="400" />
@@ -15,5 +16,15 @@
     <Property Name="IsLocked" Type="bit" Nullable="true" />
     <Property Name="IsAdmin" Type="bit" Nullable="true" />
     <Property Name="Role" Type="nvarchar" Nullable="true" MaxLength="400" />
+  </EntityType>
+  <EntityType Name="AppUsages">
+    <Key>
+      <PropertyRef Name="UsageID" />
+    </Key>
+    <Property Name="UsageID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AppName" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VisitTime" Type="datetime" Nullable="true" />
+    <Property Name="UserIP" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="UserID" Type="bigint" Nullable="true" />
   </EntityType>
 </Schema>

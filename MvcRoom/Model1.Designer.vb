@@ -11,10 +11,10 @@
 Option Strict Off
 Option Explicit On
 
-<Assembly: Global.System.Data.Objects.DataClasses.EdmSchemaAttribute("30c6d3aa-9e55-4970-8fb6-0fb7863380fb")> 
+<Assembly: Global.System.Data.Objects.DataClasses.EdmSchemaAttribute("924d30c1-83b0-4026-b665-1e72025180fa")> 
 
 '原始文件名:
-'生成日期: 3/16/2015 12:08:37 PM
+'生成日期: 3/19/2015 9:06:02 AM
 '''<summary>
 '''架构中不存在 DbMContainer 的注释。
 '''</summary>
@@ -58,18 +58,39 @@ Partial Public Class DbMContainer
     <Global.System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")>  _
     Private _Users As Global.System.Data.Objects.ObjectQuery(Of User)
     '''<summary>
+    '''架构中不存在 AppUsages 的注释。
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")>  _
+    Public ReadOnly Property AppUsages() As Global.System.Data.Objects.ObjectQuery(Of AppUsage)
+        Get
+            If (Me._AppUsages Is Nothing) Then
+                Me._AppUsages = MyBase.CreateQuery(Of AppUsage)("[AppUsages]")
+            End If
+            Return Me._AppUsages
+        End Get
+    End Property
+    <Global.System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")>  _
+    Private _AppUsages As Global.System.Data.Objects.ObjectQuery(Of AppUsage)
+    '''<summary>
     '''架构中不存在 Users 的注释。
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")>  _
     Public Sub AddToUsers(ByVal user As User)
         MyBase.AddObject("Users", user)
     End Sub
+    '''<summary>
+    '''架构中不存在 AppUsages 的注释。
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")>  _
+    Public Sub AddToAppUsages(ByVal appUsage As AppUsage)
+        MyBase.AddObject("AppUsages", appUsage)
+    End Sub
 End Class
 '''<summary>
 '''架构中不存在 DBModel.User 的注释。
 '''</summary>
 '''<KeyProperties>
-'''ID
+'''UserID
 '''</KeyProperties>
 <Global.System.Data.Objects.DataClasses.EdmEntityTypeAttribute(NamespaceName:="DBModel", Name:="User"),  _
  Global.System.Runtime.Serialization.DataContractAttribute(IsReference:=true),  _
@@ -79,38 +100,38 @@ Partial Public Class User
     '''<summary>
     '''创建新的 User 对象。
     '''</summary>
-    '''<param name="id">ID 的初始值。</param>
+    '''<param name="userID">UserID 的初始值。</param>
     <Global.System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")>  _
-    Public Shared Function CreateUser(ByVal id As Long) As User
+    Public Shared Function CreateUser(ByVal userID As Long) As User
         Dim user As User = New User()
-        user.ID = id
+        user.UserID = userID
         Return user
     End Function
     '''<summary>
-    '''架构中不存在属性 ID 的任何注释。
+    '''架构中不存在属性 UserID 的任何注释。
     '''</summary>
     <Global.System.Data.Objects.DataClasses.EdmScalarPropertyAttribute(EntityKeyProperty:=true, IsNullable:=false),  _
      Global.System.Runtime.Serialization.DataMemberAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")>  _
-    Public Property ID() As Long
+    Public Property UserID() As Long
         Get
-            Return Me._ID
+            Return Me._UserID
         End Get
         Set
-            Me.OnIDChanging(value)
-            Me.ReportPropertyChanging("ID")
-            Me._ID = Global.System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value)
-            Me.ReportPropertyChanged("ID")
-            Me.OnIDChanged
+            Me.OnUserIDChanging(value)
+            Me.ReportPropertyChanging("UserID")
+            Me._UserID = Global.System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value)
+            Me.ReportPropertyChanged("UserID")
+            Me.OnUserIDChanged
         End Set
     End Property
     <Global.System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")>  _
-    Private _ID As Long
+    Private _UserID As Long
     <Global.System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")>  _
-    Partial Private Sub OnIDChanging(ByVal value As Long)
+    Partial Private Sub OnUserIDChanging(ByVal value As Long)
         End Sub
     <Global.System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")>  _
-    Partial Private Sub OnIDChanged()
+    Partial Private Sub OnUserIDChanged()
         End Sub
     '''<summary>
     '''架构中不存在属性 UserCode 的任何注释。
@@ -293,5 +314,157 @@ Partial Public Class User
         End Sub
     <Global.System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")>  _
     Partial Private Sub OnRoleChanged()
+        End Sub
+End Class
+'''<summary>
+'''架构中不存在 DBModel.AppUsage 的注释。
+'''</summary>
+'''<KeyProperties>
+'''UsageID
+'''</KeyProperties>
+<Global.System.Data.Objects.DataClasses.EdmEntityTypeAttribute(NamespaceName:="DBModel", Name:="AppUsage"),  _
+ Global.System.Runtime.Serialization.DataContractAttribute(IsReference:=true),  _
+ Global.System.Serializable()>  _
+Partial Public Class AppUsage
+    Inherits Global.System.Data.Objects.DataClasses.EntityObject
+    '''<summary>
+    '''创建新的 AppUsage 对象。
+    '''</summary>
+    '''<param name="usageID">UsageID 的初始值。</param>
+    <Global.System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")>  _
+    Public Shared Function CreateAppUsage(ByVal usageID As Long) As AppUsage
+        Dim appUsage As AppUsage = New AppUsage()
+        appUsage.UsageID = usageID
+        Return appUsage
+    End Function
+    '''<summary>
+    '''架构中不存在属性 UsageID 的任何注释。
+    '''</summary>
+    <Global.System.Data.Objects.DataClasses.EdmScalarPropertyAttribute(EntityKeyProperty:=true, IsNullable:=false),  _
+     Global.System.Runtime.Serialization.DataMemberAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")>  _
+    Public Property UsageID() As Long
+        Get
+            Return Me._UsageID
+        End Get
+        Set
+            Me.OnUsageIDChanging(value)
+            Me.ReportPropertyChanging("UsageID")
+            Me._UsageID = Global.System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value)
+            Me.ReportPropertyChanged("UsageID")
+            Me.OnUsageIDChanged
+        End Set
+    End Property
+    <Global.System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")>  _
+    Private _UsageID As Long
+    <Global.System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")>  _
+    Partial Private Sub OnUsageIDChanging(ByVal value As Long)
+        End Sub
+    <Global.System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")>  _
+    Partial Private Sub OnUsageIDChanged()
+        End Sub
+    '''<summary>
+    '''架构中不存在属性 AppName 的任何注释。
+    '''</summary>
+    <Global.System.Data.Objects.DataClasses.EdmScalarPropertyAttribute(),  _
+     Global.System.Runtime.Serialization.DataMemberAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")>  _
+    Public Property AppName() As String
+        Get
+            Return Me._AppName
+        End Get
+        Set
+            Me.OnAppNameChanging(value)
+            Me.ReportPropertyChanging("AppName")
+            Me._AppName = Global.System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value, true)
+            Me.ReportPropertyChanged("AppName")
+            Me.OnAppNameChanged
+        End Set
+    End Property
+    <Global.System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")>  _
+    Private _AppName As String
+    <Global.System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")>  _
+    Partial Private Sub OnAppNameChanging(ByVal value As String)
+        End Sub
+    <Global.System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")>  _
+    Partial Private Sub OnAppNameChanged()
+        End Sub
+    '''<summary>
+    '''架构中不存在属性 VisitTime 的任何注释。
+    '''</summary>
+    <Global.System.Data.Objects.DataClasses.EdmScalarPropertyAttribute(),  _
+     Global.System.Runtime.Serialization.DataMemberAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")>  _
+    Public Property VisitTime() As Global.System.Nullable(Of Date)
+        Get
+            Return Me._VisitTime
+        End Get
+        Set
+            Me.OnVisitTimeChanging(value)
+            Me.ReportPropertyChanging("VisitTime")
+            Me._VisitTime = Global.System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value)
+            Me.ReportPropertyChanged("VisitTime")
+            Me.OnVisitTimeChanged
+        End Set
+    End Property
+    <Global.System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")>  _
+    Private _VisitTime As Global.System.Nullable(Of Date)
+    <Global.System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")>  _
+    Partial Private Sub OnVisitTimeChanging(ByVal value As Global.System.Nullable(Of Date))
+        End Sub
+    <Global.System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")>  _
+    Partial Private Sub OnVisitTimeChanged()
+        End Sub
+    '''<summary>
+    '''架构中不存在属性 UserIP 的任何注释。
+    '''</summary>
+    <Global.System.Data.Objects.DataClasses.EdmScalarPropertyAttribute(),  _
+     Global.System.Runtime.Serialization.DataMemberAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")>  _
+    Public Property UserIP() As String
+        Get
+            Return Me._UserIP
+        End Get
+        Set
+            Me.OnUserIPChanging(value)
+            Me.ReportPropertyChanging("UserIP")
+            Me._UserIP = Global.System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value, true)
+            Me.ReportPropertyChanged("UserIP")
+            Me.OnUserIPChanged
+        End Set
+    End Property
+    <Global.System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")>  _
+    Private _UserIP As String
+    <Global.System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")>  _
+    Partial Private Sub OnUserIPChanging(ByVal value As String)
+        End Sub
+    <Global.System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")>  _
+    Partial Private Sub OnUserIPChanged()
+        End Sub
+    '''<summary>
+    '''架构中不存在属性 UserID 的任何注释。
+    '''</summary>
+    <Global.System.Data.Objects.DataClasses.EdmScalarPropertyAttribute(),  _
+     Global.System.Runtime.Serialization.DataMemberAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")>  _
+    Public Property UserID() As Global.System.Nullable(Of Long)
+        Get
+            Return Me._UserID
+        End Get
+        Set
+            Me.OnUserIDChanging(value)
+            Me.ReportPropertyChanging("UserID")
+            Me._UserID = Global.System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value)
+            Me.ReportPropertyChanged("UserID")
+            Me.OnUserIDChanged
+        End Set
+    End Property
+    <Global.System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")>  _
+    Private _UserID As Global.System.Nullable(Of Long)
+    <Global.System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")>  _
+    Partial Private Sub OnUserIDChanging(ByVal value As Global.System.Nullable(Of Long))
+        End Sub
+    <Global.System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")>  _
+    Partial Private Sub OnUserIDChanged()
         End Sub
 End Class

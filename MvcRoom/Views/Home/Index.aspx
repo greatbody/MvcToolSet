@@ -7,7 +7,7 @@
 <asp:Content ID="indexContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2>
         孙瑞开发工具平台 - SunSoft@2014-2017</h2>
-    <%Dim recentTopFiveUserList As List(Of User) = DirectCast(ViewData("UserData"), List(Of MvcRoom.User))%>
+    <%Dim recentTopFiveUserList As List(Of User) = DirectCast(ViewData("UserData"), List(Of User))%>
     <%If recentTopFiveUserList.Count > 0 Then%>
     <table class="table table-striped">
         <caption>

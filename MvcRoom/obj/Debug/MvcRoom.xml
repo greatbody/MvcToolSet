@@ -38,9 +38,17 @@ MvcRoom
 	<summary>
 架构中不存在 Users 的注释。
 </summary>
+</member><member name="P:MvcRoom.DbMContainer.AppUsages">
+	<summary>
+架构中不存在 AppUsages 的注释。
+</summary>
 </member><member name="M:MvcRoom.DbMContainer.AddToUsers(MvcRoom.User)">
 	<summary>
 架构中不存在 Users 的注释。
+</summary>
+</member><member name="M:MvcRoom.DbMContainer.AddToAppUsages(MvcRoom.AppUsage)">
+	<summary>
+架构中不存在 AppUsages 的注释。
 </summary>
 </member><member name="T:MvcRoom.DbMContainer">
 	<summary>
@@ -50,10 +58,10 @@ MvcRoom
 	<summary>
 创建新的 User 对象。
 </summary>
-	<param name="id">ID 的初始值。</param>
-</member><member name="P:MvcRoom.User.ID">
+	<param name="userID">UserID 的初始值。</param>
+</member><member name="P:MvcRoom.User.UserID">
 	<summary>
-架构中不存在属性 ID 的任何注释。
+架构中不存在属性 UserID 的任何注释。
 </summary>
 </member><member name="P:MvcRoom.User.UserCode">
 	<summary>
@@ -88,7 +96,39 @@ MvcRoom
 架构中不存在 DBModel.User 的注释。
 </summary>
 	<KeyProperties>
-ID
+UserID
+</KeyProperties>
+</member><member name="M:MvcRoom.AppUsage.CreateAppUsage(System.Int64)">
+	<summary>
+创建新的 AppUsage 对象。
+</summary>
+	<param name="usageID">UsageID 的初始值。</param>
+</member><member name="P:MvcRoom.AppUsage.UsageID">
+	<summary>
+架构中不存在属性 UsageID 的任何注释。
+</summary>
+</member><member name="P:MvcRoom.AppUsage.AppName">
+	<summary>
+架构中不存在属性 AppName 的任何注释。
+</summary>
+</member><member name="P:MvcRoom.AppUsage.VisitTime">
+	<summary>
+架构中不存在属性 VisitTime 的任何注释。
+</summary>
+</member><member name="P:MvcRoom.AppUsage.UserIP">
+	<summary>
+架构中不存在属性 UserIP 的任何注释。
+</summary>
+</member><member name="P:MvcRoom.AppUsage.UserID">
+	<summary>
+架构中不存在属性 UserID 的任何注释。
+</summary>
+</member><member name="T:MvcRoom.AppUsage">
+	<summary>
+架构中不存在 DBModel.AppUsage 的注释。
+</summary>
+	<KeyProperties>
+UsageID
 </KeyProperties>
 </member>
 </members>

@@ -7,12 +7,13 @@
     <Schema Namespace="DBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
   <EntityContainer Name="DBModelStoreContainer">
     <EntitySet Name="Users" EntityType="DBModel.Store.Users" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AppUsages" EntityType="DBModel.Store.AppUsages" store:Type="Tables" Schema="dbo" />
   </EntityContainer>
   <EntityType Name="Users">
     <Key>
-      <PropertyRef Name="ID" />
+      <PropertyRef Name="UserID" />
     </Key>
-    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="UserCode" Type="nchar" Nullable="true" MaxLength="50" />
     <Property Name="UserName" Type="nvarchar" Nullable="true" MaxLength="100" />
     <Property Name="Password" Type="nvarchar" Nullable="true" MaxLength="400" />
@@ -21,18 +22,29 @@
     <Property Name="IsAdmin" Type="bit" Nullable="true" />
     <Property Name="Role" Type="nvarchar" Nullable="true" MaxLength="400" />
   </EntityType>
+  <EntityType Name="AppUsages">
+    <Key>
+      <PropertyRef Name="UsageID" />
+    </Key>
+    <Property Name="UsageID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AppName" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VisitTime" Type="datetime" Nullable="true" />
+    <Property Name="UserIP" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="UserID" Type="bigint" Nullable="true" />
+  </EntityType>
 </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema xmlns="http://schemas.microsoft.com/ado/2006/04/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="DBModel" Alias="Self" >
         <EntityContainer Name="DbMContainer" >
           <EntitySet Name="Users" EntityType="DBModel.User" />
+          <EntitySet Name="AppUsages" EntityType="DBModel.AppUsage" />
         </EntityContainer>
         <EntityType Name="User">
           <Key>
-            <PropertyRef Name="ID" />
+            <PropertyRef Name="UserID" />
           </Key>
-          <Property Type="Int64" Name="ID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="Int64" Name="UserID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="String" Name="UserCode" Nullable="true" FixedLength="true" MaxLength="50" />
           <Property Type="String" Name="UserName" Nullable="true" MaxLength="100" />
           <Property Type="String" Name="Password" Nullable="true" MaxLength="400" />
@@ -40,6 +52,16 @@
           <Property Type="Boolean" Name="IsLocked" Nullable="true" />
           <Property Type="Boolean" Name="IsAdmin" Nullable="true" />
           <Property Type="String" Name="Role" Nullable="true" MaxLength="400" />
+        </EntityType>
+        <EntityType Name="AppUsage">
+          <Key>
+            <PropertyRef Name="UsageID" />
+          </Key>
+          <Property Type="Int64" Name="UsageID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="String" Name="AppName" Nullable="true" FixedLength="false" MaxLength="Max" />
+          <Property Type="DateTime" Name="VisitTime" Nullable="true" />
+          <Property Type="String" Name="UserIP" Nullable="true" MaxLength="100" />
+          <Property Type="Int64" Name="UserID" Nullable="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -50,7 +72,7 @@
     <EntitySetMapping Name="Users">
       <EntityTypeMapping TypeName="IsTypeOf(DBModel.User)">
         <MappingFragment StoreEntitySet="Users">
-          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
           <ScalarProperty Name="UserCode" ColumnName="UserCode" />
           <ScalarProperty Name="UserName" ColumnName="UserName" />
           <ScalarProperty Name="Password" ColumnName="Password" />
@@ -58,6 +80,17 @@
           <ScalarProperty Name="IsLocked" ColumnName="IsLocked" />
           <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
           <ScalarProperty Name="Role" ColumnName="Role" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AppUsages">
+      <EntityTypeMapping TypeName="IsTypeOf(DBModel.AppUsage)">
+        <MappingFragment StoreEntitySet="AppUsages">
+          <ScalarProperty Name="UsageID" ColumnName="UsageID" />
+          <ScalarProperty Name="AppName" ColumnName="AppName" />
+          <ScalarProperty Name="VisitTime" ColumnName="VisitTime" />
+          <ScalarProperty Name="UserIP" ColumnName="UserIP" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -81,6 +114,7 @@
     <edmx:Diagrams>
       <Diagram Name="Model1" >
         <EntityTypeShape EntityType="DBModel.User" Width="1.5" PointX="0.5" PointY="0.5" Height="2.5430916341145831" />
+        <EntityTypeShape EntityType="DBModel.AppUsage" Width="1.5" PointX="2.875" PointY="1.75" Height="1.9202278645833331" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
