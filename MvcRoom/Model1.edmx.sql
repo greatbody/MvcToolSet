@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, and Azure
 -- --------------------------------------------------
--- Date Created: 03/19/2015 09:04:53
--- Generated from EDMX file: E:\GitCode\GitHub\MvcToolSet\MvcRoom\Model1.edmx
+-- Date Created: 03/19/2015 21:41:05
+-- Generated from EDMX file: E:\GitHubCode\MvcToolSet\MvcRoom\Model1.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -24,6 +24,9 @@ GO
 
 IF OBJECT_ID(N'[dbo].[Users]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Users];
+GO
+IF OBJECT_ID(N'[dbo].[AppUsages]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[AppUsages];
 GO
 
 -- --------------------------------------------------
