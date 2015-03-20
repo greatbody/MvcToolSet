@@ -11,11 +11,11 @@
         <div class="row">
             <div class="col-xs-3" id="myScrollspy">
                 <ul class="nav nav-tabsn nav-stackedn" id="myNav">
-                    <li><a href="#section-1">Action Creator</a></li>
-                    <li><a href="#section-2">第二部分</a></li>
-                    <li><a href="#section-3">第三部分</a></li>
-                    <li><a href="#section-4">第四部分</a></li>
-                    <li><a href="#section-5">第五部分</a></li>
+                    <li><a href="javascript:void(0);" onclick="moveToXY('section-1');">Action Creator</a></li>
+                    <li><a href="javascript:void(0);" onclick="moveToXY('section-2');">第二部分</a></li>
+                    <li><a href="javascript:void(0);" onclick="moveToXY('section-3');">第三部分</a></li>
+                    <li><a href="javascript:void(0);" onclick="moveToXY('section-4');">第四部分</a></li>
+                    <li><a href="javascript:void(0);" onclick="moveToXY('section-5');">第五部分</a></li>
                 </ul>
             </div>
             <div class="col-xs-9">
@@ -48,7 +48,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="form-group col-md-12">
-                                        <button class="btn btn-default btn-block form-control" id="btnFunctionAdd">创建SQL</button>
+                                        <button class="btn btn-default btn-block form-control" id="btnFunctionAdd">创建SQL，并复制到SQL Server Management Studio中自动格式化吧</button>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -253,5 +253,15 @@
                 }
             });
         });
+    </script>
+    <script type="plain/text" style="display: none" id="templete_sql">
+GO
+IF NOT EXISTS ( SELECT  1
+                FROM    myAction
+                WHERE   ObjectType = '{objecttype}'
+                        AND ActionCode = '{actioncode}' )
+    BEGIN
+{sql}
+    END
     </script>
 </asp:Content>
