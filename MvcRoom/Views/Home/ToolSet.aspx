@@ -242,14 +242,14 @@
         }
         ul.nav-tabsn.affix
         {
-            top: 30px; /* Set the top position of pinned element */
+            top: 180px; /* Set the top position of pinned element */
         }
     </style>
     <script type="text/javascript">
         $(document).ready(function () {
             $("#myNav").affix({
                 offset: {
-                    top: 125
+                    top: 100
                 }
             });
         });
