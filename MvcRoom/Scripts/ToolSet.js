@@ -37,6 +37,12 @@ var command = {
             $("#FunctionCode").val(sFunctionCode);
             $("#ActionCode").val(sActionCode);
             this.create(sFunctionCode, sActionCode, sActionSql);
+        },
+        lockInput:function(id) {
+            $("#" + id).keypress(function() {
+                event.keyCode = 0;
+                event.returnValue = false;
+            });
         }
     }
 };

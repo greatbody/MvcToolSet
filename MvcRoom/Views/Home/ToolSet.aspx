@@ -33,12 +33,12 @@
                                     <div class="form-group col-md-6">
                                         <label class="sr-only" for="name">
                                             Function Code</label>
-                                        <input type="text" class="form-control" id="FunctionCode" placeholder="请输入FunctionCode，如01010902">
+                                        <input type="text" class="form-control" id="FunctionCode" placeholder="请输入FunctionCode，如01010902" />
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label class="sr-only" for="name">
                                             Action Code</label>
-                                        <input type="text" class="form-control" id="ActionCode" placeholder="请输入ActionCode，如01">
+                                        <input type="text" class="form-control" id="ActionCode" placeholder="请输入ActionCode，如01" />
                                     </div>
                                 </div>
                                 <div class="row">
@@ -68,20 +68,11 @@
                 <hr />
                 <h2 id="section-2">
                     第二部分</h2>
-                <p>
-                    Nullam hendrerit justo non leo aliquet imperdiet. Etiam in sagittis lectus. Suspendisse
-                    ultrices placerat accumsan. Mauris quis dapibus orci. In dapibus velit blandit pharetra
-                    tincidunt. Quisque non sapien nec lacus condimentum facilisis ut iaculis enim. Sed
-                    viverra interdum bibendum. Donec ac sollicitudin dolor. Sed fringilla vitae lacus
-                    at rutrum. Phasellus congue vestibulum ligula sed consequat.</p>
-                <p>
-                    Vestibulum consectetur scelerisque lacus, ac fermentum lorem convallis sed. Nam
-                    odio tortor, dictum quis malesuada at, pellentesque vitae orci. Vivamus elementum,
-                    felis eu auctor lobortis, diam velit egestas lacus, quis fermentum metus ante quis
-                    urna. Sed at facilisis libero. Cum sociis natoque penatibus et magnis dis parturient
-                    montes, nascetur ridiculus mus. Vestibulum bibendum blandit dolor. Nunc orci dolor,
-                    molestie nec nibh in, hendrerit tincidunt ante. Vivamus sem augue, hendrerit non
-                    sapien in, mollis ornare augue.</p>
+                <div class="row">
+                    <div class="col-md-12">
+                        
+                    </div>
+                </div>
                 <hr />
                 <h2 id="section-3">
                     第三部分</h2>

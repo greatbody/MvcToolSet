@@ -1,4 +1,14 @@
-﻿$("#btnSubmit").click(function () {
+﻿var command = {
+    action: {
+        lockInput: function (id) {
+            $("#" + id).keypress(function () {
+                event.keyCode = 0;
+                event.returnValue = false;
+            });
+        }
+    }
+};
+$("#btnSubmit").click(function () {
     if (!validAll()) {
         return;
     }
@@ -50,3 +60,22 @@ function getToObject(rangeParentName) {
 $('#BeginDate').datepicker({
     format: 'yyyy-mm-dd'
 });
+
+$(document).ready(function () {
+    command.action.lockInput("BeginDate");
+});
+
+function noPermitInput(e) {
+    var evt = window.event || e;
+    if (isIE()) {
+        evt.returnValue = false; //ie 禁止键盘输入     
+    } else {
+        evt.preventDefault(); //fire fox 禁止键盘输入     
+    }
+}
+function isIE() {
+    if (window.navigator.userAgent.toLowerCase().indexOf("msie") >= 1)
+        return true;
+    else
+        return false;
+}     

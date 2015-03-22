@@ -445,7 +445,6 @@
     <Content Include="Editor\ueditor.parse.js" />
     <Content Include="Editor\ueditor.parse.min.js" />
     <Content Include="Global.asax" />
-    <Content Include="Image\picbra.jpg" />
     <Content Include="Model1.edmx.sql" />
     <Content Include="Scripts\About.js" />
     <Content Include="Scripts\bootstrap-datepicker.js" />
@@ -462,6 +461,7 @@
     <Content Include="Scripts\MailCreator.js" />
     <Content Include="Scripts\master.js" />
     <Content Include="Scripts\Index.js" />
+    <Content Include="Scripts\require.js" />
     <Content Include="Scripts\ToolSet.js" />
     <Content Include="Scripts\WageInput.js" />
     <Content Include="Views\Home\EditFrame.aspx" />
@@ -496,10 +496,10 @@
     <Content Include="Views\Shared\LogOnUserControl.ascx" />
     <Content Include="Views\Shared\Site.Master" />
     <Content Include="Views\Web.config" />
-    <Content Include="配置说明.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Image\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
