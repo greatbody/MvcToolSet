@@ -11,7 +11,7 @@
     <%If recentTopFiveUserList.Count > 0 Then%>
     <table class="table table-striped">
         <caption>
-            欢迎新用户</caption>
+            欢迎新用户(注册系统目前处于娱乐状态)</caption>
         <colgroup>
             <col style="width: 300px" />
             <col style="width: 300px"/>
@@ -40,7 +40,7 @@
                     <%= suser.UserName %>
                 </td>
                 <td>
-                    <%= suser.CreateTime %>
+                    <%= Format(sUser.CreateTime, "yyyy-MM-dd HH:mm:ss")%>
                 </td>
             </tr>
             <%Next%>

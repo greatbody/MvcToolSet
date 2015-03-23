@@ -12,8 +12,8 @@
             <div class="col-xs-3" id="myScrollspy">
                 <ul class="nav nav-tabsn nav-stackedn" id="myNav">
                     <li><a href="javascript:void(0);" onclick="Public.moveToID('section-1');">Action Creator</a></li>
-                    <li><a href="javascript:void(0);" onclick="Public.moveToID('section-2');">第二部分</a></li>
-                    <li><a href="javascript:void(0);" onclick="Public.moveToID('section-3');">第三部分</a></li>
+                    <li><a href="javascript:void(0);" onclick="Public.moveToID('section-2');">常用模板提取</a></li>
+                    <li><a href="javascript:void(0);" onclick="Public.moveToID('section-3');">常用网址</a></li>
                     <li><a href="javascript:void(0);" onclick="Public.moveToID('section-4');">第四部分</a></li>
                     <li><a href="javascript:void(0);" onclick="Public.moveToID('section-5');">第五部分</a></li>
                 </ul>
@@ -21,86 +21,67 @@
             <div class="col-xs-9">
                 <h2 id="section-1">
                     Action Creator</h2>
-                <div class="row">
-                    <table class="table">
-                        <colgroup>
-                            <col style="width: 200px" />
-                            <col />
-                        </colgroup>
-                        <tr>
-                            <td>
-                                <div class="row">
-                                    <div class="form-group col-md-6">
-                                        <label class="sr-only" for="name">
-                                            Function Code</label>
-                                        <input type="text" class="form-control" id="FunctionCode" placeholder="请输入FunctionCode，如01010902" />
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="sr-only" for="name">
-                                            Action Code</label>
-                                        <input type="text" class="form-control" id="ActionCode" placeholder="请输入ActionCode，如01" />
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="form-group col-md-12">
-                                        <textarea class="form-control" id="ActionSql" placeholder="粘贴你拦截到的新增功能点SQL（一次一个）"></textarea>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="form-group col-md-12">
-                                        <button class="btn btn-default btn-block form-control" id="btnFunctionAdd">创建SQL，并复制到SQL Server Management Studio中自动格式化吧</button>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="form-group col-md-12">
-                                        <textarea class="form-control" id="ActionSql_Result"></textarea>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">
-                                
-                            </td>
-                        </tr>
-                    </table>
-                </div>
+
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label class="sr-only" for="name">
+                                Function Code</label>
+                            <input type="text" class="form-control" id="FunctionCode" placeholder="请输入FunctionCode，如01010902" />
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="sr-only" for="name">
+                                Action Code</label>
+                            <input type="text" class="form-control" id="ActionCode" placeholder="请输入ActionCode，如01" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <textarea class="form-control" id="ActionSql" placeholder="粘贴你拦截到的新增功能点SQL（一次一个）"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <button class="btn btn-default btn-block form-control" id="btnFunctionAdd">
+                                创建SQL，并复制到SQL Server Management Studio中自动格式化吧</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <textarea class="form-control" id="ActionSql_Result"></textarea>
+                        </div>
+                    </div>
+
                 <hr />
                 <h2 id="section-2">
-                    第二部分</h2>
+                    常用模板提取</h2>
                 <div class="row">
-                    <div class="col-md-12">
-                        
+                    <div class="form-group col-md-6">
+                        <select id="htmlElementType" class="form-control btn-block">
+                            <option value=""></option>
+                            <option value="table">表格</option>
+                            <option value="templete_sql_view">修改视图</option>
+                            <option value="templete_sql_storedprocedure">存储过程</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <button class="btn btn-default btn-block form-control" id="btnCreateHtml">
+                            创建HTML</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <textarea class="form-control" id="htmlCode"></textarea>
                     </div>
                 </div>
                 <hr />
                 <h2 id="section-3">
-                    第三部分</h2>
-                <p>
-                    Integer pulvinar leo id risus pellentesque vestibulum. Sed diam libero, sodales
-                    eget sapien vel, porttitor bibendum enim. Donec sed nibh vitae lorem porttitor blandit
-                    in nec ante. Pellentesque vitae metus ipsum. Phasellus sed nunc ac sem malesuada
-                    condimentum. Etiam in aliquam lectus. Nam vel sapien diam. Donec pharetra id arcu
-                    eget blandit. Proin imperdiet mattis augue in porttitor. Quisque tempus enim id
-                    lobortis feugiat. Suspendisse tincidunt risus quis dolor fringilla blandit. Ut sed
-                    sapien at purus lacinia porttitor. Nullam iaculis, felis a pretium ornare, dolor
-                    nisl semper tortor, vel sagittis lacus est consequat eros. Sed id pretium nisl.
-                    Curabitur dolor nisl, laoreet vitae aliquam id, tincidunt sit amet mauris.</p>
-                <p>
-                    Phasellus vitae suscipit justo. Mauris pharetra feugiat ante id lacinia. Etiam faucibus
-                    mauris id tempor egestas. Duis luctus turpis at accumsan tincidunt. Phasellus risus
-                    risus, volutpat vel tellus ac, tincidunt fringilla massa. Etiam hendrerit dolor
-                    eget ante rutrum adipiscing. Cras interdum ipsum mattis, tempus mauris vel, semper
-                    ipsum. Duis sed dolor ut enim lobortis pellentesque ultricies ac ligula. Pellentesque
-                    convallis elit nisi, id vulputate ipsum ullamcorper ut. Cras ac pulvinar purus,
-                    ac viverra est. Suspendisse potenti. Integer pellentesque neque et elementum tempus.
-                    Curabitur bibendum in ligula ut rhoncus.</p>
-                <p>
-                    Quisque pharetra velit id velit iaculis pretium. Nullam a justo sed ligula porta
-                    semper eu quis enim. Pellentesque pellentesque, metus at facilisis hendrerit, lectus
-                    velit facilisis leo, quis volutpat turpis arcu quis enim. Nulla viverra lorem elementum
-                    interdum ultricies. Suspendisse accumsan quam nec ante mollis tempus. Morbi vel
-                    accumsan diam, eget convallis tellus. Suspendisse potenti.</p>
+                    常用网址</h2>
+                    <div class="row">
+                        <ul class="btn-group">
+                            <li><a href="http://bugfx.mysoft.net.cn/Default.aspx" target="_blank">BUG分析系统</a></li>
+                            <li><a href="http://10.5.10.20/" target="_blank">SCM切换后数据库查询</a></li>
+                        </ul>
+                    </div>
                 <hr />
                 <h2 id="section-4">
                     第四部分</h2>
@@ -245,14 +226,33 @@
             });
         });
     </script>
-    <script type="plain/text" style="display: none" id="templete_sql">
-GO
+    <script id="templete_sql" type="plain/text">GO
 IF NOT EXISTS ( SELECT  1
                 FROM    myAction
                 WHERE   ObjectType = '{objecttype}'
                         AND ActionCode = '{actioncode}' )
     BEGIN
 {sql}
+    END
+    </script>
+    <script id="templete_sql_view" type="plan/text">IF EXISTS ( SELECT  1
+            FROM    sys.views
+            WHERE   name = '视图名称' )
+    BEGIN
+        --修改后的视图SQL
+    END
+GO
+    </script>
+    <script id="templete_sql_storedprocedure" type="plan/text">IF EXISTS ( SELECT  *
+            FROM    dbo.sysobjects
+            WHERE   id = OBJECT_ID(N'[dbo].[存储过程名]')
+                    AND OBJECTPROPERTY(id, N'IsProcedure') = 1 )
+    DROP PROC 存储过程名
+GO
+CREATE PROC 存储过程名 @参数名 参数类型(宽度)
+AS
+    BEGIN
+        --存储过程SQL
     END
     </script>
 </asp:Content>

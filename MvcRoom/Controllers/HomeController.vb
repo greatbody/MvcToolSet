@@ -84,4 +84,10 @@ Public Class HomeController
         ViewData("BeginDate") = BeginDate
         Return View("EmailHtmlData")
     End Function
+
+    <HttpPost()> _
+    Function VisitLog(ByVal BusinessType As String) As ActionResult
+        BusinessCenter.LogVisitor(Web.HttpContext.Current, BusinessType)
+        Return Json(New With {.Result = True})
+    End Function
 End Class
