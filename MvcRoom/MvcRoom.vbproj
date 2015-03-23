@@ -101,6 +101,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business\BusinessCenter.vb" />
+    <Compile Include="Business\MyController.vb" />
     <Compile Include="Business\SecurityCenter.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>

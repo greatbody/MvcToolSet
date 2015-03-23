@@ -65,7 +65,7 @@
                     </div>
                     <div class="form-group col-md-6">
                         <button class="btn btn-default btn-block form-control" id="btnCreateHtml">
-                            创建HTML</button>
+                            获取模板</button>
                     </div>
                 </div>
                 <div class="row">
