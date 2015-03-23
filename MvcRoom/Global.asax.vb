@@ -11,11 +11,18 @@ Public Class MvcApplication
         ' (1) 路由名称
         ' (2) 带参数的 URL
         ' (3) 参数默认值
+        '以下支持早期版本的IIS
         routes.MapRoute( _
             "Default", _
-            "{controller}/{action}/{id}", _
+            "{controller}.aspx/{action}/{id}", _
             New With {.controller = "Home", .action = "Index", .id = UrlParameter.Optional} _
         )
+        '以下处理集成模式站点
+        'routes.MapRoute( _
+        '            "Default", _
+        '            "{controller}/{action}/{id}", _
+        '            New With {.controller = "Home", .action = "Index", .id = UrlParameter.Optional} _
+        '        )
 
     End Sub
 
